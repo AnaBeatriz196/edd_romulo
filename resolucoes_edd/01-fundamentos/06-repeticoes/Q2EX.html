@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo 02</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fee4e4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fabbcb;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        #numeros {
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Números de 1 a 5:</h2>
+    <ul id="numeros"></ul>
+</div>
+
+<script>
+    // Selecionando o elemento ul onde os números serão exibidos
+    var numerosList = document.getElementById("numeros");
+
+    // Loop for...of para adicionar números de 1 a 5 na lista
+    for (let numero of [1, 2, 3, 4, 5]) {
+        var li = document.createElement("li"); // Criando elemento li
+        li.textContent = numero; // Definindo o texto do elemento li
+        numerosList.appendChild(li); // Adicionando o elemento li à lista ul
+    }
+</script>
+
+</body>
+</html>

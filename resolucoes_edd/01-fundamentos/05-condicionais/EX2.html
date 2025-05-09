@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Q11</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fee4e4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fabbcb;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        input, select, button {
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: none;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            background: #dd8ba0;
+            cursor: pointer;
+        }
+        #mensagem {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>   
+</head>
+<body>
+
+<div class="container">
+    <h2>Escolha uma opção</h2>
+    <select id="selecao" onchange="alterarMensagem()">
+        <option value="1">Opção 1</option>
+        <option value="2">Opção 2</option>
+        <option value="3">Opção 3</option>
+    </select><br><br>
+    <p id="mensagem"></p>
+</div>
+
+<script>
+    function alterarMensagem() {
+        let selecao = document.getElementById("selecao");
+        let mensagem = document.getElementById("mensagem");
+
+        switch (selecao.value) {
+            case "1":
+                mensagem.innerHTML = "Você selecionou a Opção 1.";
+                break;
+            case "2":
+                mensagem.innerHTML = "Você selecionou a Opção 2.";
+                break;
+            case "3":
+                mensagem.innerHTML = "Você selecionou a Opção 3.";
+                break;
+            default:
+                mensagem.innerHTML = "Opção inválida.";
+        }
+    }
+</script>
+
+</body>
+</html>

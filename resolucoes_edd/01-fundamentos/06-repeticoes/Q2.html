@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Q2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fee4e4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fabbcb;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        input, button {
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: none;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            background: #dd8ba0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Crie uma página web que solicite um número e,
+         em seguida, imprima a tabuada desse número (de 1 a 10) 
+         utilizando um loop "for".</h2>
+    <input type="number" id="numero">
+    <button onclick="mostrarTabuada()">Mostrar Tabuada</button>
+    <ul id="tabuada"></ul>
+</div>
+
+<script>
+    function mostrarTabuada() {
+        const numero = document.getElementById("numero").value;
+        const tabuada = document.getElementById("tabuada");
+        tabuada.innerHTML = ""; // Limpa a lista
+
+        for (let i = 1; i <= 10; i++) {
+            const li = document.createElement("li");
+            li.textContent = `${numero} x ${i} = ${numero * i}`;
+            tabuada.appendChild(li);
+        }
+    }
+</script>
+
+</body>
+</html>

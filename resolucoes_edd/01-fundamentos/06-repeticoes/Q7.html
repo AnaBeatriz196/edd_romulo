@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Q7</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fee4e4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fabbcb;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        input, button {
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: none;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            background: #dd8ba0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Crie uma página web que leia um número n (número de termos de uma progressão aritmética),
+         a1 ( o primeiro termo da progressão) e r (a razão da progressão) e escreva os n 
+         termos desta progressão, bem como a soma dos elementos.</h2>
+    <input type="number" id="n" placeholder="Número de termos">
+    <input type="number" id="a1" placeholder="Primeiro termo">
+    <input type="number" id="r" placeholder="Razão">
+    <button onclick="calcularPA()">Calcular Progressão Aritmética</button>
+    <p id="resultado"></p>
+</div>
+
+<script>
+    function calcularPA() {
+        const n = parseInt(document.getElementById("n").value);
+        const a1 = parseInt(document.getElementById("a1").value);
+        const r = parseInt(document.getElementById("r").value);
+        const resultado = document.getElementById("resultado");
+        let soma = 0;
+        let termos = [];
+
+        for (let i = 0; i < n; i++) {
+            const termo = a1 + i * r;
+            termos.push(termo);
+            soma += termo;
+        }
+
+        resultado.textContent = `Termos: ${termos.join(", ")}. Soma: ${soma}`;
+    }
+</script>
+
+</body>
+</html>

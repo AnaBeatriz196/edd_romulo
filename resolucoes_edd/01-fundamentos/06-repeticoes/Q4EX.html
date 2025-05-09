@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo 04</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fee4e4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fabbcb;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        #frutas {
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Frutas:</h2>
+    <ul id="frutas"></ul>
+</div>
+
+<script>
+    // Selecionando o elemento ul onde as frutas serão exibidas
+    var frutasList = document.getElementById("frutas");
+
+    // Lista de frutas
+    var frutas = ["maçã", "banana", "laranja", "uva", "morango"];
+
+    // Loop for...of para adicionar frutas à lista
+    for (let fruta of frutas) {
+        var li = document.createElement("li"); // Criando elemento li
+        li.textContent = fruta; // Definindo o texto do elemento li
+        frutasList.appendChild(li); // Adicionando o elemento li à lista ul
+    }
+</script>
+
+</body>
+</html>

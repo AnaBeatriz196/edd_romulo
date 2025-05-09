@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Q9</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fee4e4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fabbcb;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        input, select, button {
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: none;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            background: #dd8ba0;
+            cursor: pointer;
+        }
+        #mensagem {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>   
+</head>
+<body>
+
+<div class="container">
+    <h2>Escreva um programa que solicite ao usuário dois valores booleanos (True ou False) 
+        e armazene-os em variáveis. Em seguida, aplique os operadores lógicos "and", "or" e "not"
+         entre essas variáveis e imprima os resultados.</h2>
+    <form onsubmit="event.preventDefault(); operarBooleanos();">
+        <input type="text" id="bool1" placeholder="Primeiro valor (true/false)" required><br><br>
+        <input type="text" id="bool2" placeholder="Segundo valor (true/false)" required><br><br>
+        <button type="submit">Aplicar Operadores</button>
+    </form>
+    <div id="mensagem"></div>
+</div>
+
+<script>
+    function operarBooleanos() {
+        const bool1 = document.getElementById('bool1').value.toLowerCase() === 'true';
+        const bool2 = document.getElementById('bool2').value.toLowerCase() === 'true';
+        
+        const and = bool1 && bool2;
+        const or = bool1 || bool2;
+        const not = !bool1;
+        
+        document.getElementById('mensagem').innerHTML = `
+            AND: ${and}<br>
+            OR: ${or}<br>
+            NOT do primeiro valor: ${not}
+        `;
+    }
+</script>
+
+</body>
+</html>

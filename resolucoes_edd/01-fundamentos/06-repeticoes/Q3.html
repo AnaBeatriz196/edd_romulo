@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Q3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fee4e4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fabbcb;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        input, button {
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: none;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            background: #dd8ba0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Crie uma página web que peça ao usuário para digitar uma frase 
+        e, em seguida, conte quantas vogais (a, e, i, o, u) existem na 
+        frase utilizando um loop "for".</h2>
+    <input type="text" id="frase">
+    <button onclick="contarVogais()">Contar Vogais</button>
+    <p id="resultado"></p>
+</div>
+
+<script>
+    function contarVogais() {
+        const frase = document.getElementById("frase").value.toLowerCase();
+        const resultado = document.getElementById("resultado");
+        const vogais = "aeiou";
+        let contador = 0;
+
+        for (let letra of frase) {
+            if (vogais.includes(letra)) {
+                contador++;
+            }
+        }
+
+        resultado.textContent = `Número de vogais: ${contador}`;
+    }
+</script>
+
+</body>
+</html>

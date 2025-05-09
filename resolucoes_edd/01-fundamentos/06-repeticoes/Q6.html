@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Q7</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fee4e4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: #fabbcb;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      width: 100%;
+      max-width: 500px;
+    }
+    input[type="text"] {
+      width: 40px;
+      height: 40px;
+      font-size: 24px;
+      text-transform: uppercase;
+      text-align: center;
+      margin: 0 5px;
+      border-radius: 5px;
+      border: none;
+    }
+    button {
+      background: #dd8ba0;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      margin-top: 15px;
+      width: 100%;
+      cursor: pointer;
+    }
+    #mensagem {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    .tentativa {
+      font-family: monospace;
+      margin: 5px 0;
+    }
+    .letra-certa {
+      color: green;
+      font-weight: bold;
+    }
+    .letra-quase {
+      color: orange;
+      font-weight: bold;
+    }
+    .letra-errada {
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Crie uma página web que peça ao usuário para adivinhar uma palavra de 5 letras 
+        (por exemplo: termo). A página deve contar a quantidade de tentativa. 
+        Continue pedindo ao usuário para adivinhar até que ele acerte.</h2>
+    <div id="inputs">
+      <input type="text" maxlength="1" id="l1" oninput="nextInput(1)">
+      <input type="text" maxlength="1" id="l2" oninput="nextInput(2)">
+      <input type="text" maxlength="1" id="l3" oninput="nextInput(3)">
+      <input type="text" maxlength="1" id="l4" oninput="nextInput(4)">
+      <input type="text" maxlength="1" id="l5" oninput="nextInput(5)">
+    </div>
+    <button onclick="verificarPalpite()">Tentar</button>
+    <div id="mensagem"></div>
+    <div id="tentativas"></div>
+  </div>
+
+  <script>
+    const palavrasSecretas = ["termo", "pazem", "luzir", "sonho", "grato"];
+    const palavraSecreta = palavrasSecretas[Math.floor(Math.random() * palavrasSecretas.length)];
+    let tentativas = 0;
+    const maxTentativas = 6;
+
+    function nextInput(index) {
+      const atual = document.getElementById(`l${index}`);
+      if (atual.value.length === 1 && index < 5) {
+        document.getElementById(`l${index + 1}`).focus();
+      }
+    }
+
+    function verificarPalpite() {
+      const letras = [];
+      for (let i = 1; i <= 5; i++) {
+        letras.push(document.getElementById(`l${i}`).value.toLowerCase());
+      }
+
+      if (letras.some(l => l === '')) {
+        document.getElementById("mensagem").textContent = "Preencha todas as letras.";
+        return;
+      }
+
+      const palpite = letras.join("");
+      tentativas++;
+
+      let resultado = "";
+      for (let i = 0; i < 5; i++) {
+        if (palpite[i] === palavraSecreta[i]) {
+          resultado += `<span class="letra-certa">${palpite[i]}</span>`;
+        } else if (palavraSecreta.includes(palpite[i])) {
+          resultado += `<span class="letra-quase">${palpite[i]}</span>`;
+        } else {
+          resultado += `<span class="letra-errada">${palpite[i]}</span>`;
+        }
+      }
+
+      const tentativasDiv = document.getElementById("tentativas");
+      const tentativaSpan = document.createElement("div");
+      tentativaSpan.classList.add("tentativa");
+      tentativaSpan.innerHTML = `Tentativa ${tentativas}: ${resultado}`;
+      tentativasDiv.appendChild(tentativaSpan);
+
+      const mensagem = document.getElementById("mensagem");
+
+      if (palpite === palavraSecreta) {
+        mensagem.innerHTML = `🎉 Você acertou! A palavra era <strong>${palpite}</strong>.`;
+        desativarEntradas();
+      } else if (tentativas >= maxTentativas) {
+        mensagem.innerHTML = `❌ Fim de jogo! A palavra era <strong>${palavraSecreta}</strong>.`;
+        desativarEntradas();
+      } else {
+        mensagem.textContent = `Tentativas restantes: ${maxTentativas - tentativas}`;
+      }
+
+      for (let i = 1; i <= 5; i++) {
+        document.getElementById(`l${i}`).value = "";
+      }
+      document.getElementById("l1").focus();
+    }
+
+    function desativarEntradas() {
+      for (let i = 1; i <= 5; i++) {
+        document.getElementById(`l${i}`).disabled = true;
+      }
+    }
+  </script>
+</body>
+</html>

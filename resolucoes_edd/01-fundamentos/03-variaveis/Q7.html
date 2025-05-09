@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Q7</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fee4e4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fabbcb;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        input, select, button {
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: none;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            background: #dd8ba0;
+            cursor: pointer;
+        }
+        #mensagem {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>   
+</head>
+<body>
+
+<div class="container">
+    <h2>Escreva um programa que solicite ao usuário o seu salário mensal 
+        e o número de meses trabalhados no ano. Calcule e imprima o salário anual.</h2>
+    <form onsubmit="event.preventDefault(); calcularSalarioAnual();">
+        <input type="number" id="salario" placeholder="Salário mensal" step="any" required><br><br>
+        <input type="number" id="meses" placeholder="Meses trabalhados no ano" required><br><br>
+        <button type="submit">Calcular</button>
+    </form>
+    <div id="mensagem"></div>
+</div>
+
+<script>
+    function calcularSalarioAnual() {
+        const salario = parseFloat(document.getElementById('salario').value);
+        const meses = parseInt(document.getElementById('meses').value);
+        const salarioAnual = (salario * meses).toFixed(2);
+        document.getElementById('mensagem').innerHTML = `Seu salário anual é R$ ${salarioAnual}`;
+    }
+</script>
+
+</body>
+</html>

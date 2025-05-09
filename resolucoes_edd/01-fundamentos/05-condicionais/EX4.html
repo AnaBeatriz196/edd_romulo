@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Q11</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fee4e4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fabbcb;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        input, select, button {
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: none;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            background: #dd8ba0;
+            cursor: pointer;
+        }
+        #mensagem {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>   
+</head>
+<body>
+
+<div class="container">
+    <h2>Escolha uma opção</h2>
+    <select id="selecao" onchange="adicionarElemento()">
+        <option value="1">Opção 1</option>
+        <option value="2">Opção 2</option>
+        <option value="3">Opção 3</option>
+    </select><br><br>
+    <div id="container"></div>
+</div>
+
+<script>
+    function adicionarElemento() {
+        let container = document.getElementById("container");
+        let selecao = document.getElementById("selecao");
+
+        container.innerHTML = "";
+
+        switch (selecao.value) {
+            case "1":
+                let paragrafo1 = document.createElement("p");
+                paragrafo1.textContent = "Você selecionou a Opção 1.";
+                container.appendChild(paragrafo1);
+                break;
+            case "2":
+                let paragrafo2 = document.createElement("p");
+                paragrafo2.textContent = "Você selecionou a Opção 2.";
+                container.appendChild(paragrafo2);
+                break;
+            case "3":
+                let paragrafo3 = document.createElement("p");
+                paragrafo3.textContent = "Você selecionou a Opção 3.";
+                container.appendChild(paragrafo3);
+                break;
+            default:
+                let paragrafoDefault = document.createElement("p");
+                paragrafoDefault.textContent = "Opção inválida.";
+                container.appendChild(paragrafoDefault);
+        }
+    }
+</script>
+
+</body>
+</html>

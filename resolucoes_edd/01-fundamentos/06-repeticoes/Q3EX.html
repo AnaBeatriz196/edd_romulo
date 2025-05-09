@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo 03</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fee4e4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fabbcb;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        #cores {
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Cores:</h2>
+    <ul id="cores"></ul>
+</div>
+
+<script>
+    // Selecionando o elemento ul onde as cores serão exibidas
+    var coresList = document.getElementById("cores");
+
+    // Lista de cores
+    var cores = ["vermelho", "verde", "azul", "amarelo", "laranja"];
+
+    // Loop for...of para adicionar cores à lista
+    for (let cor of cores) {
+        var li = document.createElement("li"); // Criando elemento li
+        li.textContent = cor; // Definindo o texto do elemento li
+        coresList.appendChild(li); // Adicionando o elemento li à lista ul
+    }
+</script>
+
+</body>
+</html>

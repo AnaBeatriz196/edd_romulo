@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo 01</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fee4e4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fabbcb;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        input, select, button {
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: none;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            background: #dd8ba0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Escolha alguns tipos de música, em seguida, clique no botão abaixo:</h2>
+    <form name="selectForm">
+        <select id="tipoMusica" name="tipoMusica" multiple="multiple">
+            <option selected="selected">R&B</option>
+            <option>Jazz</option>
+            <option>Blues</option>
+            <option>New Age</option>
+            <option>Clássico</option>
+            <option>Ópera</option>
+        </select>
+        <br><br>
+        <input id="btn" type="button" value="Quantos foram selecionados?" />
+    </form>
+    <div id="resultado"></div>
+</div>
+
+<script>
+    function howMany(selectObject) {
+        let numeroSelecionadas = 0;
+        for (let option of selectObject.options) {
+            if (option.selected) {
+                numeroSelecionadas++;
+            }
+        }
+        return numeroSelecionadas;
+    }
+
+    var btn = document.getElementById("btn");
+    btn.addEventListener("click", function () {
+        document.getElementById("resultado").innerText = 
+            "Total de opções selecionadas: " + howMany(document.selectForm.tipoMusica);
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Q10</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fee4e4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fabbcb;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        input, select, button {
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: none;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            background: #dd8ba0;
+            cursor: pointer;
+        }
+        #mensagem {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>   
+</head>
+<body>
+
+<div class="container">
+    <h2>Escreva um programa que solicite ao usuário duas strings e verifique se elas são iguais. 
+        Imprima uma mensagem informando o resultado da comparação.</h2>
+    <form onsubmit="event.preventDefault(); compararStrings();">
+        <input type="text" id="str1" placeholder="Primeira string" required><br><br>
+        <input type="text" id="str2" placeholder="Segunda string" required><br><br>
+        <button type="submit">Comparar</button>
+    </form>
+    <div id="mensagem"></div>
+</div>
+
+<script>
+    function compararStrings() {
+        const str1 = document.getElementById('str1').value;
+        const str2 = document.getElementById('str2').value;
+        const resultado = str1 === str2 ? 'são iguais' : 'são diferentes';
+        document.getElementById('mensagem').innerHTML = `As strings ${resultado}.`;
+    }
+</script>
+
+</body>
+</html>
