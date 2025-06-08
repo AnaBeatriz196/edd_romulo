@@ -243,18 +243,10 @@ section {
   margin: 0;
 }
 
-.about-img {
-  transition: all .45s ease;
-}
-
 .about-img img {
   max-width: 45rem;
 }
 
-.about-img:hover{
-	transform: translateY(-8px);
-	cursor: pointer;
-}
 
 .about-text {
   max-width: 55rem;
@@ -349,10 +341,9 @@ img.balls {
 
 .portfolio-content {
   display: grid;
-  align-items: center;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, auto);
+  gap: 20px;
   padding: 0 15rem 10rem;
 }
 
@@ -361,14 +352,14 @@ img.balls {
   overflow: hidden;
   border-radius: 8px;
   cursor: pointer;
-  margin: 0 0.5rem;
+  margin: 0;
 }
 
-.row img{
+.row img {
   width: 100%;
   border-radius: 8px;
   display: block;
-	transition: transform 0.5s;
+  transition: transform 0.5s;
 }
 
 .layer {
@@ -389,46 +380,51 @@ img.balls {
   transition: height 0.5s;
 }
 
-.layer h5{
-	font-size: 20px;
-	font-weight: 600;
-	margin-bottom: 15px;
+.layer h5 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
   color: white;
 }
-.layer p{
-	color: white;
-	font-size: 1.2rem;
-	line-height: 1.5;
+
+.layer p {
+  color: white;
+  font-size: 1.2rem;
+  line-height: 1.5;
 }
+
 .layer .site-github {
   display: flex;
   gap: 10px;
 }
-.layer .site-github i:hover{
+
+.layer .site-github i:hover {
   color: white;
-  background: #FF4D00;
+  background: #ff0095;
 }
-.layer i{
+
+.layer i {
   color: var(--second-text-color);
-	margin-top: 20px;
-	font-size: 30px;
-	background: white;
-	width: 60px;
-	height: 60px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 50%;
+  margin-top: 20px;
+  font-size: 30px;
+  background: white;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
   transition: all 0.4s ease;
 }
 
-.row:hover img{
-	transform: scale(1.1);
+.row:hover img {
+  transform: scale(1.1);
   filter: brightness(20%);
   transition: all .45s ease;
 }
-.row:hover .layer{
-	height: 100%;
+
+.row:hover .layer {
+  height: 100%;
 }
 
 /* --------------- Contato ----------------------- */

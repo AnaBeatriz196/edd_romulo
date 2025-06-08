@@ -1,103 +1,389 @@
 <!DOCTYPE html>
 <html lang="pt-br" class="light">
-<head>
-  <title>Ana Beatriz</title> 
 
-  <!--- Link do css --->
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+<head>
+    <title>Ana Beatriz</title>
+
+    <!--- Link do css --->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
 </head>
+
 <body>
-  <!--Barra de cima-->
-  <nav>
-      <ul class="navlist">
-        <li class="active" name="nav-li"><a href="#home" class="active" name="nav-a">Início</a></li>
-        <li name="nav-li"><a href="#about" name="nav-a">Sobre</a></li>
-        <li name="nav-li"><a href="#projects" name="nav-a">Projetos</a></li>
-        <li name="nav-li"><a href="#contact" name="nav-a">Contato</a></li>
-      </ul> 
-      <div>
-      </div>   
+    <!--Barra de cima-->
+    <nav>
+        <ul class="navlist">
+            <li class="active" name="nav-li"><a href="#home" class="active" name="nav-a">Início</a></li>
+            <li name="nav-li"><a href="#about" name="nav-a">Sobre</a></li>
+            <li name="nav-li"><a href="#projects" name="nav-a">Projetos</a></li>
+            <li name="nav-li"><a href="#contact" name="nav-a">Contato</a></li>
+        </ul>
+        <div>
+        </div>
     </nav>
     <main>
-      <section id="home" class="home">
-        <div class="home-presentation">
-          <p class="my-name">meu nome é</p>
-          <h1 id="name">Ana</h1>
-          <h1 id="last-name">Beatriz</h1>
-          <h3><p>Sou</p> Desenvolvedora Web <span><strong>|</strong> 
-            <br>
-            Front-end - Back-end</span></h3>
-          <div class="button">
-            <a href="#projects" class="project-button">Projetos</a>
-            <a href="#contact" class="contact-button">Contato</a>
-          </div>
-        </div>
-        <img class="home-mac" src="./img/principal.avif" alt="laptop">
-      </section>
-      <section class="about" id="about">
-        <div class="about-img">
-          <img src="./img/sobremim.jpeg" alt="">
-        
-        <!-- Sobre Mim -->
-        </div>
-        <div class="about-text">
-          <h2><span>SOBRE</span> MIM</h2>
-          <p>
-            Tenho 21 anos, sou formada no curso técnico em Informática pelo IFPB – Campus Picuí e 
-            atualmente curso Tecnologia em Sistemas para Internet. Atuo no desenvolvimento web, 
-            trabalhando tanto no back-end quanto no front-end. Tenho experiência com linguagens como 
-            Python, Java, JavaScript, e tecnologias como React e Redis, além de estar sempre em busca 
-            de aprender novas ferramentas e aprimorar minhas habilidades. Gosto de criar soluções práticas e funcionais, 
-            e estou constantemente evoluindo como desenvolvedora para entregar produtos cada vez melhores.
-          </p>
-          </div>
-      </section>
-      </section>
-      
-      <!-- Projetos selecionados -->
-      <section id="projects" class="projects">
-        <div class="line"></div>
-        <div class="main-text">
-          <h2>Meus <span>Projetos</span></h2>
+        <section id="home" class="home">
+            <div class="home-presentation">
+                <p class="my-name">meu nome é</p>
+                <h1 id="name">Ana</h1>
+                <h1 id="last-name">Beatriz</h1>
+                <h3>
+                    <p>Sou</p> Desenvolvedora Web <span><strong>|</strong>
+                        <br>
+                        Front-end - Back-end</span>
+                </h3>
+                <div class="button">
+                    <a href="#projects" class="project-button">Projetos</a>
+                    <a href="#contact" class="contact-button">Contato</a>
+                </div>
+            </div>
+            <img class="home-mac" src="./img/principal.avif" alt="laptop">
+        </section>
+        <section class="about" id="about">
+            <div class="about-img">
+                <img src="./img/sobremim.jpeg" alt="">
+
+                <!-- Sobre Mim -->
+            </div>
+            <div class="about-text">
+                <h2><span>SOBRE</span> MIM</h2>
+                <p>
+                    Tenho 21 anos, sou formada no curso técnico em Informática pelo IFPB – Campus Picuí e
+                    atualmente curso Tecnologia em Sistemas para Internet. Atuo no desenvolvimento web,
+                    trabalhando tanto no back-end quanto no front-end. Tenho experiência com linguagens como
+                    Python, Java, JavaScript, e tecnologias como React e Redis, além de estar sempre em busca
+                    de aprender novas ferramentas e aprimorar minhas habilidades. Gosto de criar soluções práticas e
+                    funcionais,
+                    e estou constantemente evoluindo como desenvolvedora para entregar produtos cada vez melhores.
+                </p>
+            </div>
+        </section>
+        </section>
+
+
+        <!-- Projetos -->
+
+        <section id="projects" class="projects">
+            <div class="line"></div>
+            <div class="main-text">
+                <h2>Meus<span> Projetos</span></h2>
+            </div>
+
+            <div class="portfolio-content">
+                <div class="row">
+                    <img src="./img/códigos.jpeg" alt="atividades">
+                    <div class="layer">
+                        <h5>Projeto 1</h5>
+                        <p>Escreva um programa que solicite ao usuário o seu nome e a sua idade</p>
+                        <div class="site-github">
+                            <a href="https://github.com/AnaBeatriz196/edd_romulo" target="_blank">
+                                <i class='bx bx-link-external'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img src="./img/códigos.jpeg" alt="atividades">
+                    <div class="layer">
+                        <h5>Projeto 2</h5>
+                        <p>Escreva um programa que solicite ao usuário dois números inteiros e 
+                            armazene-os em variáveis</p>
+                        <div class="site-github">
+                            <a href="https://github.com/AnaBeatriz196/edd_romulo" target="_blank">
+                                <i class='bx bx-link-external'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img src="./img/códigos.jpeg" alt="atividades">
+                    <div class="layer">
+                        <h5>Projeto 3</h5>
+                        <p>Escreva um programa que solicite ao usuário o raio 
+                            de um círculo e calcule a área e o perímetro 
+                            desse círculo</p>
+                        <div class="site-github">
+                            <a href="https://github.com/AnaBeatriz196/edd_romulo" target="_blank">
+                                <i class='bx bx-link-external'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img src="./img/códigos.jpeg" alt="atividades">
+                    <div class="layer">
+                        <h5>Projeto 4</h5>
+                        <p>Escreva um programa que solicite ao usuário uma temperatura 
+                            em graus Celsius e converta-a para Fahrenheit</p>
+                        <div class="site-github">
+                            <a href="https://github.com/AnaBeatriz196/edd_romulo" target="_blank">
+                                <i class='bx bx-link-external'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img src="./img/códigos.jpeg" alt="atividades">
+                    <div class="layer">
+                        <h5>Projeto 5</h5>
+                        <p>Escreva um programa que solicite ao usuário o seu salário mensal 
+                        e o número de meses trabalhados no ano</p>
+                        <div class="site-github">
+                            <a href="https://github.com/AnaBeatriz196/edd_romulo" target="_blank">
+                                <i class='bx bx-link-external'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img src="./img/códigos.jpeg" alt="atividades">
+                    <div class="layer">
+                        <h5>Projeto 6</h5>
+                        <p>Escreva um programa que solicite ao usuário um número e verifique 
+                            se ele é par ou ímpar</p>
+                        <div class="site-github">
+                            <a href="https://github.com/AnaBeatriz196/edd_romulo" target="_blank">
+                                <i class='bx bx-link-external'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img src="./img/códigos.jpeg" alt="atividades">
+                    <div class="layer">
+                        <h5>Projeto 7</h5>
+                        <p>Escreva um programa que solicite ao usuário dois valores booleanos</p>
+                        <div class="site-github">
+                            <a href="https://github.com/AnaBeatriz196/edd_romulo" target="_blank">
+                                <i class='bx bx-link-external'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img src="./img/códigos.jpeg" alt="atividades">
+                    <div class="layer">
+                        <h5>Projeto 8</h5>
+                        <p>Escreva um programa que solicite ao usuário duas strings e 
+                            verifique se elas são iguais.</p>
+                        <div class="site-github">
+                            <a href="https://github.com/AnaBeatriz196/edd_romulo" target="_blank">
+                                <i class='bx bx-link-external'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img src="./img/códigos.jpeg" alt="atividades">
+                    <div class="layer">
+                        <h5>Projeto 9</h5>
+                        <p>Escreva um programa que solicite ao usuário dois números e verifique se o primeiro número 
+                            é maior que o segundo</p>
+                        <div class="site-github">
+                            <a href="https://github.com/AnaBeatriz196/edd_romulo" target="_blank">
+                                <i class='bx bx-link-external'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img src="./img/códigos.jpeg" alt="atividades">
+                    <div class="layer">
+                        <h5>Projeto 10</h5>
+                        <p>Escreva um programa que solicite ao usuário a sua idade e verifique 
+                            se ele é maior de idade </p>
+                        <div class="site-github">
+                            <a href="https://github.com/AnaBeatriz196/edd_romulo" target="_blank">
+                                <i class='bx bx-link-external'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img src="./img/códigos.jpeg" alt="atividades">
+                    <div class="layer">
+                        <h5>Projeto 11</h5>
+                        <p>Advinhe o número entre 1 e 100</p>
+                        <div class="site-github">
+                            <a href="https://github.com/AnaBeatriz196/edd_romulo" target="_blank">
+                                <i class='bx bx-link-external'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img src="./img/códigos.jpeg" alt="atividades">
+                    <div class="layer">
+                        <h5>Projeto 12</h5>
+                        <p>Crie uma página web que solicite um número e mostre em uma 
+                            lista numerada</p>
+                        <div class="site-github">
+                            <a href="https://github.com/AnaBeatriz196/edd_romulo" target="_blank">
+                                <i class='bx bx-link-external'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img src="./img/códigos.jpeg" alt="atividades">
+                    <div class="layer">
+                        <h5>Projeto 13</h5>
+                        <p>Crie uma página web que solicite um número e,
+                            em seguida, imprima a tabuada desse número</p>
+                        <div class="site-github">
+                            <a href="https://github.com/AnaBeatriz196/edd_romulo" target="_blank">
+                                <i class='bx bx-link-external'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img src="./img/códigos.jpeg" alt="atividades">
+                    <div class="layer">
+                        <h5>Projeto 14</h5>
+                        <p>Crie uma página web que peça ao usuário para digitar uma palavra 
+                            e, em seguida, imprima a palavra ao contrário utilizando um loop "for"</p>
+                        <div class="site-github">
+                            <a href="https://github.com/AnaBeatriz196/edd_romulo" target="_blank">
+                                <i class='bx bx-link-external'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img src="./img/códigos.jpeg" alt="atividades">
+                    <div class="layer">
+                        <h5>Projeto 15</h5>
+                        <p>Crie uma página web que peça ao usuário para adivinhar um número 
+                            secreto entre 1 e 100.</p>
+                        <div class="site-github">
+                            <a href="https://github.com/AnaBeatriz196/edd_romulo" target="_blank">
+                                <i class='bx bx-link-external'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img src="./img/códigos.jpeg" alt="atividades">
+                    <div class="layer">
+                        <h5>Projeto 16</h5>
+                        <p>Crie uma página web que peça ao usuário para adivinhar uma palavra de 5 letras </p>
+                        <div class="site-github">
+                            <a href="https://github.com/AnaBeatriz196/edd_romulo" target="_blank">
+                                <i class='bx bx-link-external'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img src="./img/códigos.jpeg" alt="atividades">
+                    <div class="layer">
+                        <h5>Projeto 17</h5>
+                        <p>Crie uma página web que leia um número n </p>
+                        <div class="site-github">
+                            <a href="https://github.com/AnaBeatriz196/edd_romulo" target="_blank">
+                                <i class='bx bx-link-external'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img src="./img/códigos.jpeg" alt="atividades">
+                    <div class="layer">
+                        <h5>Projeto 18</h5>
+                        <p>Escolha alguns tipos de música, em seguida, clique no botão abaixo</p>
+                        <div class="site-github">
+                            <a href="https://github.com/AnaBeatriz196/edd_romulo" target="_blank">
+                                <i class='bx bx-link-external'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img src="./img/códigos.jpeg" alt="atividades">
+                    <div class="layer">
+                        <h5>Projeto 19</h5>
+                        <p>A página deve contar a quantidade de tentativa. 
+                            Continue pedindo ao usuário para adivinhar até que ele acerte.</p>
+                        <div class="site-github">
+                            <a href="https://github.com/AnaBeatriz196/edd_romulo" target="_blank">
+                                <i class='bx bx-link-external'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img src="./img/códigos.jpeg" alt="atividades">
+                    <div class="layer">
+                        <h5>Projeto 20</h5>
+                        <p>Número (de 1 a 10) 
+                            utilizando um loop "for"</p>
+                        <div class="site-github">
+                            <a href="https://github.com/AnaBeatriz196/edd_romulo" target="_blank">
+                                <i class='bx bx-link-external'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!---- Contato --->
+        <section class="contact" id="contact">
+            <div class="contact-text">
+                <div class="main-text">
+                    <h2>Entre em <span>contato</span></h2>
+                </div>
+            </div>
+            <div class="contact-icons">
+                <a href="https://github.com/AnaBeatriz190" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/ana-beatriz-b87270303" target="_blank"><i
+                        class='bx bxl-linkedin'></i></a>
+                <a href="https://www.instagram.com/ana_allu/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="mailto:beatriz.casado@academico.ifpb.edu.br" target="_blank"><i class='bx bxl-gmail'></i></a>
+            </div>
+
+        </section>
+    </main>
+
+    <!----end section --->
+    <section class="end">
+        <div class="last-text">
+            <p>by Ana Beatriz<img src="./img/bussola.svg" alt=""></p>
         </div>
 
-      </section>
-
-    <!---- Contato --->
-    <section class="contact" id="contact">
-      <div class="contact-text">
-        <div class="main-text">
-          <h2>Entre em <span>contato</span></h2>
-        </div>   
-      </div> 
-      <div class="contact-icons">
-        <a href="https://github.com/AnaBeatriz190" target="_blank"><i class='bx bxl-github' ></i></a>
-        <a href="https://www.linkedin.com/in/ana-beatriz-b87270303" target="_blank"><i class='bx bxl-linkedin' ></i></a>
-        <a href="https://www.instagram.com/ana_allu/" target="_blank"><i class='bx bxl-instagram-alt' ></i></a>
-        <a href="mailto:beatriz.casado@academico.ifpb.edu.br" target="_blank"><i class='bx bxl-gmail' ></i></a>
-      </div>
-  
+        <div class="top">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
     </section>
-  </main>
-
-	<!----end section --->
-	<section class="end">
-		<div class="last-text">
-			<p>by Ana Beatriz<img src="./img/bussola.svg" alt=""></p>
-		</div>
-
-		<div class="top">
-			<a href="#home"><i class='bx bx-up-arrow-alt' ></i></a>
-		</div>
-	</section>
 
 
-  <!--- Link para o script --->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!--- Link para o script --->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
